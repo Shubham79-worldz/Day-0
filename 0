@@ -1,0 +1,29 @@
+A=list(map(int,input().split()))
+s_um=0
+for i in range(len(A)):
+    g=[]
+    
+    S_um= A[i]
+    if s_um==5:
+        break
+    elif S_um==5:
+        g.append(A[i])
+        print(g)
+        break
+    elif S_um>5:
+        continue
+    elif S_um<5:
+        g.append(A[i])
+        s_um=A[i]
+        for j in range(i+1,len(A)):
+            s_um=s_um+A[j]
+            if s_um<5:
+                g.append(A[j])
+                continue
+            elif s_um==5:
+                g.append(A[j])
+                print(g)
+                break
+                
+            else:
+                break
